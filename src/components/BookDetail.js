@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
 
-const AlbumDetail = (props) => {
-  const { title, artist, image } = props.album;
+const BookDetail = (props) => {
+  const { title, artist, image } = props.book;
   return (
     <View style={styles.cardContainerStyle}>
         <View style={styles.cardSectionStyle}>
@@ -56,4 +56,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AlbumDetail;
+export default BookDetail;
