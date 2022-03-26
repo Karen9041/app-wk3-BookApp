@@ -2,7 +2,7 @@ import React from "react";
 import { Text, FlatList, SectionList, StyleSheet } from "react-native";
 import PopularBookDetail from "./PopularBookDetail"
 import BookDetail from "./BookDetail";
-import sections from "../json/album_section.json";
+import sections from "../json/book_section.json";
 
 
 const Booklist = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image} from "react-native";
+import {Linking, Pressable, StyleSheet, Text, View, Image} from "react-native";
 
 const PopularBookDetail = props => {
     let {book} = props;
@@ -7,15 +7,17 @@ const PopularBookDetail = props => {
     <View style={{flexDirection: 'column'}}>
       <View style={styles.cardContainerStyle}>
         <View style={styles.cardSectionStyle}>
-          <Image
-            style={styles.imageStyle}
-            source={{uri: book.image}}
-          />
+          <Pressable onPress={()=> Linking.openURL(book.url)}>
+            <Image
+              style={styles.imageStyle}
+              source={{uri: book.image}}
+            />
+          </Pressable>
         </View>
       </View>  
       <View style={styles.headerContainerStyle}>
         <Text style={styles.headerTitleStyle}>{book.title}</Text>
-        <Text style={styles.headerContentStyle}>{book.artist}</Text>
+        <Text style={styles.headerContentStyle}>{book.author}</Text>
       </View>   
     </View>
 )};
