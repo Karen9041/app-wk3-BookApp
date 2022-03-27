@@ -1,5 +1,5 @@
 import React from "react";
-import {Linking, Pressable, StyleSheet, Text, View, Image} from "react-native";
+import { Pressable, StyleSheet, Text, View, Image} from "react-native";
 
 const BookDetail = ({book, navigation}) => {
     return(
