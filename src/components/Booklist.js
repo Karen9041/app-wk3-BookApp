@@ -1,31 +1,23 @@
 import React from "react";
 import { Text, FlatList, SectionList, StyleSheet } from "react-native";
-import PopularBookDetail from "./PopularBookDetail"
-import BookDetail from "./BookDetail";
-import sections from "../json/book_section.json";
+import BookDetail from "./BookDetail"
+import sections from "../json/bookData.json";
 
 
-const Booklist = () => {
+const Booklist = ({navigation}) => {
   const renderSectionHeader = ({section}) => (
     <>
       <Text style={styles.sectionHeader}>{section.title}</Text>
-        {section.horizontal?(
-          <FlatList
-            horizontal={true}
-            data={section.data}
-            renderItem={({item})=><PopularBookDetail book={item}/>}
-            showsHorizontalScrollIndicator={false}
-            keyExtractor={ item => item.title }
-          />
-        ):null} 
+        <FlatList
+          horizontal={true}
+          data={section.data}
+          renderItem={({item})=><BookDetail book={item} navigation={navigation}/>}
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={ item => item.title }
+        />
     </>
   );
-  const renderItem = ({ item, section }) => {
-    if (section.horizontal) {
-      return null;
-    }
-    return <BookDetail book={item} />
-  };
+  const renderItem = () => null;
 
   return (
     <SectionList 
@@ -42,11 +34,10 @@ const Booklist = () => {
 
 const styles = StyleSheet.create({
   sectionHeader: {
-    fontWeight: '600',
-    fontSize: 18,
-    paddingTop: 20,
-    paddingBottom: 5,
-    paddingLeft: 10,
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginTop: 8,
+    marginLeft : 10,
   },
 })
 
