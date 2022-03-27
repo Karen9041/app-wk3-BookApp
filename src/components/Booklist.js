@@ -22,7 +22,7 @@ const Booklist = ({navigation}) => {
   return (
     <SectionList 
       sections={sections}
-      contentContainerStyle={{ paddingHorizontal: 10 }}
+      contentContainerStyle={{ paddingHorizontal: 12 ,paddingBottom:50}}
       stickySectionHeadersEnabled={false}
       showsHorizontalScrollIndicator={false}
       renderSectionHeader={renderSectionHeader}

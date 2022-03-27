@@ -30,12 +30,12 @@ const styles = StyleSheet.create({
     headerContainerStyle: {
       justifyContent: "space-around",
       paddingLeft: 12,
-      width: 140,
     },
     headerTitleStyle: {
       fontSize: 16,
       fontWeight: 'bold',
       paddingVertical: 5,
+      width: 140,
     },
     headerContentStyle: {
       fontSize: 12,

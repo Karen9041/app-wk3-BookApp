@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Karen\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-native-vector
+  C:\Program Files\nodejs\node.exe C:\Users\Karen\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-native-gesture-handler@~2.1.0 react-native-reanimate
 
 PATH: 
   C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\Karen\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\nodejs\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Java\jdk-17.0.2\bin;C:\Users\Karen\AppData\Local\Microsoft\WindowsApps;;C:\Users\Karen\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Karen\AppData\Roaming\npm;C:\Users\Karen\.dotnet\tools
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/react-native-vector: Not found
+  Error: https://registry.yarnpkg.com/react-native-reanimate: Not found
       at Request.params.callback [as _callback] (C:\Users\Karen\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
       at Request.self.callback (C:\Users\Karen\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
       at Request.emit (events.js:315:20)
@@ -40,6 +40,7 @@ npm manifest:
     },
     "dependencies": {
       "@react-navigation/bottom-tabs": "^6.2.0",
+      "@react-navigation/drawer": "^6.3.3",
       "@react-navigation/native": "^6.0.8",
       "@react-navigation/native-stack": "^6.5.2",
       "expo": "~44.0.0",
@@ -1953,6 +1954,15 @@ Lockfile:
       nanoid "^3.1.23"
       query-string "^7.0.0"
       react-is "^16.13.0"
+  
+  "@react-navigation/drawer@^6.3.3":
+    version "6.3.3"
+    resolved "https://registry.yarnpkg.com/@react-navigation/drawer/-/drawer-6.3.3.tgz#e6c1cbb462bb32713aaeb8dcd8516c591811bf97"
+    integrity sha512-o4FLzb/y+Nu3y0Z/BYueTKA4aaAv6meazG49kYEoUEFFF5ctv4vVgx71w1kM8TeTC3YHnrYzyqag/KoXu6k+Pg==
+    dependencies:
+      "@react-navigation/elements" "^1.3.1"
+      color "^3.1.3"
+      warn-once "^0.1.0"
   
   "@react-navigation/elements@^1.3.1":
     version "1.3.1"

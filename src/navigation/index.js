@@ -10,25 +10,28 @@ import DetailScreen from '../screens/DetailScreen';
 import WishlistScreen from '../screens/WishlistScreen';
 import MybooksScreen from '../screens/MybooksScreen';
 
+import MyTheme from '../Theme';
+import { useTheme } from 'native-base';
+
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 
 const Navigation = () =>{
     return(
-        <NavigationContainer>
+        <NavigationContainer theme={MyTheme}>
            <MyTabs/>
         </NavigationContainer>
     );
 }
 
 const MyTabs = () => {
+
     return (
       <Tab.Navigator
         initialRouteName="HomeStack"
         screenOptions={{
-          tabBarActiveTintColor: '#6200EE',
-          // headerShown: false
+            headerShown: false
         }}
       >
         <Tab.Screen 
