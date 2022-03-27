@@ -1,59 +1,56 @@
 import React from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
+import {Linking, Pressable, StyleSheet, Text, View, Image} from "react-native";
 
-const BookDetail = (props) => {
-  const { title, artist, image } = props.book;
-  return (
-    <View style={styles.cardContainerStyle}>
+const BookDetail = ({book, navigation}) => {
+    return(
+    <View style={{flexDirection: 'column'}}>
+      <View style={styles.cardContainerStyle}>
         <View style={styles.cardSectionStyle}>
+          <Pressable onPress={()=> navigation.navigate('Detail',book)}>
             <Image
-            style={styles.imageStyle}
-            source={{
-                uri: image
-            }}
+              style={styles.imageStyle}
+              source={{uri: book.image}}
             />
+          </Pressable>
         </View>
-        <View style={[styles.cardSectionStyle]}>
-            <View style={styles.headerContentStyle}>
-            <Text>{title}</Text> 
-            <Text style={styles.artistStyle}>{artist}</Text>
-            </View>
-        </View>
+      </View>  
+      <View style={styles.headerContainerStyle}>
+        <Text style={styles.headerTitleStyle}>{book.title}</Text>
+        <Text style={styles.headerContentStyle}>{book.author}</Text>
+      </View>   
     </View>
-  );
-}
+)};
 
 const styles = StyleSheet.create({
-  headerContentStyle: {
-    flexDirection: "column",
-    paddingLeft: 10
-  },
-  cardContainerStyle: {
-    backgroundColor: "#F5F1ED",
-    borderWidth: 1,
-    borderRadius: 2,
-    borderColor: "#ddd",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 3,
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 15
-  },
-  cardSectionStyle: {
-    padding: 5,
-    borderColor: "#DAD2BC",
-    borderBottomWidth: 1
-  },
-  imageStyle: {
-    height: 300,
-    width: null
-  },
-  artistStyle:{
-    fontSize:12
-  }
-});
+    cardContainerStyle: {
+      marginLeft: 5,
+      marginRight: 5,
+      marginTop: 10,
+    },
+    headerContainerStyle: {
+      justifyContent: "space-around",
+      paddingLeft: 12,
+      width: 140,
+    },
+    headerTitleStyle: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      paddingVertical: 5,
+    },
+    headerContentStyle: {
+      fontSize: 12,
+      fontWeight: '500',
+      color: "#131313",
+      opacity: 0.5,
+      width: '100%',
+    },
+    cardSectionStyle: {
+      margin: 5,
+    },
+    imageStyle: {
+      height: 200,
+      width: 140,
+    }
+  });
 
-export default BookDetail;
+  export default BookDetail;
