@@ -4,7 +4,7 @@ const MyTheme = {
    ...DefaultTheme,
    colors: {
      ...DefaultTheme.colors,
-     primary: '#6200EE',
+     primary700: '#6200EE',
    },
  };
 
