@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavigationContainer, useTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -11,7 +11,7 @@ import {
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
-import { Divider, Image, Box, Text } from 'native-base';
+import { Divider, Image, Box, Text, Pressable } from 'native-base';
 
 import BookScreen from '../screens/BookScreen';
 import DetailScreen from '../screens/DetailScreen';
@@ -149,6 +149,8 @@ const MyTabs = () => {
   }
 
 const HomeStackNavigator =({navigation}) =>{
+  const {colors} = useTheme();
+  const[toggle,setToggle] = useState(true);
     return(
         <Stack.Navigator>
             <Stack.Screen
@@ -187,10 +189,20 @@ const HomeStackNavigator =({navigation}) =>{
                       />
                     ),
                     headerRight: () => (
+                      <Pressable onPress={()=>setToggle(!toggle)}>
+                        {toggle?
                         <MaterialCommunityIcons
                           name={'bookmark-outline'}
                           size={28}
+                          color={'black'}
+                          />:<MaterialCommunityIcons
+                          name={'bookmark'}
+                          size={28}
+                          color={colors.primary700}
                           />
+                        }
+                        
+                      </Pressable>
                     )
                 }}
             />
