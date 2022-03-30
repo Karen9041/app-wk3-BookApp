@@ -71,7 +71,7 @@ const MyDrawer = () => {
 
   return (
     <Drawer.Navigator 
-      initialRouteName="HomeStack"
+      initialRouteName="Home"
       screenOptions={{
         drawerActiveTintColor:colors.primary700,
         drawerStyle: { width: 260 },
@@ -80,7 +80,7 @@ const MyDrawer = () => {
       drawerContent={props => <CustomDrawerContent {...props} />}
     >
       <Drawer.Screen 
-        name="HomeStack" 
+        name="HomeDeawer" 
         component={MyTabs} 
         options={{
           headerShown: false,
@@ -106,7 +106,7 @@ const MyTabs = () => {
         }}
       >
         <Tab.Screen 
-          name="HomeStack" 
+          name="HomeTab" 
           component={HomeStackNavigator}
           options={{
             headerShown: false,
