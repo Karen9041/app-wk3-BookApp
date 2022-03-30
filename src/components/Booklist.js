@@ -11,7 +11,7 @@ const Booklist = ({navigation}) => {
         <FlatList
           horizontal={true}
           data={section.data}
-          renderItem={({item})=><BookDetail book={item} navigation={navigation}/>}
+          renderItem={({item})=><BookDetail book={item} navigation={navigation} title={section.title}/>}
           showsHorizontalScrollIndicator={false}
           keyExtractor={ item => item.title }
         />

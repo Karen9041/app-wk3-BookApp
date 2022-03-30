@@ -1,7 +1,8 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View, Image} from "react-native";
+import Starlist from "./Starlist";
 
-const BookDetail = ({book, navigation}) => {
+const BookDetail = ({book, navigation, title}) => {
     return(
     <View style={{flexDirection: 'column'}}>
       <View style={styles.cardContainerStyle}>
@@ -13,8 +14,9 @@ const BookDetail = ({book, navigation}) => {
             />
           </Pressable>
         </View>
-      </View>  
+      </View> 
       <View style={styles.headerContainerStyle}>
+        {(title == "Newest")?<Starlist star={book.star}/> : null}
         <Text style={styles.headerTitleStyle}>{book.title}</Text>
         <Text style={styles.headerContentStyle}>{book.author}</Text>
       </View>   

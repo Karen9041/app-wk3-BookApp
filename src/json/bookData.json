@@ -7,6 +7,7 @@
          "title": "Fashinopolis",
          "author": "Dana Thomas",
          "url": "https://www.amazon.com/Taylor-Swift/dp/B0014I4KH6",
+         "star":"4",
          "price":"46.99",
          "image": "https://github.com/Karen9041/app-wk3-BookApp/blob/main/src/images/img_book_fashinopolis.png?raw=true",
          "descriptions": "Taylor Swift has been enhanced by the addition of 3 brand new tracks (\"I'm Only Me When I'm With You\", \"Invisible\", \"A Perfectly Good Heart\") and a pop version of the hit single \"Teardrops On My Guitar\"."
@@ -15,6 +16,7 @@
          "title": "Chanel",
          "author": "Patrick Mauriès",
          "url": "https://www.amazon.com/Fearless-Enhanced-Taylor-Swift/dp/B001EYGOEM",
+         "star":"4",
          "price":"46.99",
          "image": "https://github.com/Karen9041/app-wk3-BookApp/blob/main/src/images/img_book_chanel.png?raw=true",
          "descriptions": "Taylor Swift has been enhanced by the addition of 3 brand new tracks (\"I'm Only Me When I'm With You\", \"Invisible\", \"A Perfectly Good Heart\") and a pop version of the hit single \"Teardrops On My Guitar\"."
@@ -23,6 +25,7 @@
          "title": "Calligraphy",
          "author": "June & Lucy",
          "url": "https://www.amazon.com/Speak-Now-Taylor-Swift/dp/B003WTE886",
+         "star":"4",
          "price":"46.99",
          "image": "https://github.com/Karen9041/app-wk3-BookApp/blob/main/src/images/img_book_calligraphy.png?raw=true",
          "descriptions": "Taylor Swift has been enhanced by the addition of 3 brand new tracks (\"I'm Only Me When I'm With You\", \"Invisible\", \"A Perfectly Good Heart\") and a pop version of the hit single \"Teardrops On My Guitar\"."
@@ -37,6 +40,7 @@
          "title": "Yves Saint Laurent",
          "author": "Suzy Menkes",
          "url": "https://www.amazon.com/Taylor-Swift/dp/B0014I4KH6",
+         "star":"4",
          "price":"46.99",
          "image": "https://github.com/Karen9041/app-wk3-BookApp/blob/main/src/images/img_book_ysl.png?raw=true",
          "descriptions": "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
@@ -45,6 +49,7 @@
          "title": "The Book of Signs",
          "author": "Rudolf Koch ",
          "url": "https://www.amazon.com/Fearless-Enhanced-Taylor-Swift/dp/B001EYGOEM",
+         "star":"3",
          "price":"46.99",
          "image": "https://github.com/Karen9041/app-wk3-BookApp/blob/main/src/images/img_book_tbos.png?raw=true",
          "descriptions": "Taylor Swift has been enhanced by the addition of 3 brand new tracks (\"I'm Only Me When I'm With You\", \"Invisible\", \"A Perfectly Good Heart\") and a pop version of the hit single \"Teardrops On My Guitar\"."
@@ -53,6 +58,7 @@
          "title": "Stitched Up",
          "author": "Tansy E. Hoskins",
          "url": "https://www.amazon.com/Speak-Now-Taylor-Swift/dp/B003WTE886",
+         "star":"3",
          "price":"46.99",
          "image": "https://github.com/Karen9041/app-wk3-BookApp/blob/main/src/images/img_book_stitchedup.png?raw=true",
          "descriptions": "Taylor Swift has been enhanced by the addition of 3 brand new tracks (\"I'm Only Me When I'm With You\", \"Invisible\", \"A Perfectly Good Heart\") and a pop version of the hit single \"Teardrops On My Guitar\"."

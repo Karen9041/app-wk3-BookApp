@@ -99,7 +99,7 @@ const MyTabs = () => {
 
     return (
       <Tab.Navigator
-        initialRouteName="HomeStack"
+        initialRouteName="Home"
         screenOptions={{
             headerShown: false,
             tabBarActiveTintColor:colors.primary700,
@@ -198,7 +198,7 @@ const HomeStackNavigator =({navigation}) =>{
     );
 }
 
-const WishlistStackScreen =() =>{
+const WishlistStackScreen =({navigation}) =>{
     return(
         <Stack.Navigator>
             <Stack.Screen
@@ -207,13 +207,27 @@ const WishlistStackScreen =() =>{
                 options={{
                     title: "",
                     headerShadowVisible:false,
+                    headerLeft: () => (
+                      <MaterialCommunityIcons
+                        name={'menu'}
+                        size={28}
+                        onPress={() => navigation.openDrawer()}
+                      />
+                    ),
+                  headerRight: () => (
+                      <MaterialCommunityIcons
+                        name={'magnify'}
+                        size={28}
+                        // style={{ marginRight: 8 }}
+                      />
+                  )
                 }}
             />
         </Stack.Navigator>
     );
 }
 
-const MybooksStackScreen =() =>{
+const MybooksStackScreen =({navigation}) =>{
     return(
         <Stack.Navigator>
             <Stack.Screen
@@ -222,6 +236,19 @@ const MybooksStackScreen =() =>{
                 options={{
                     title: "",
                     headerShadowVisible:false,
+                    headerLeft: () => (
+                      <MaterialCommunityIcons
+                        name={'menu'}
+                        size={28}
+                        onPress={() => navigation.openDrawer()}
+                      />
+                        ),
+                      headerRight: () => (
+                      <MaterialCommunityIcons
+                        name={'magnify'}
+                        size={28}
+                        // style={{ marginRight: 8 }}
+                      />)
                 }}
             />
         </Stack.Navigator>

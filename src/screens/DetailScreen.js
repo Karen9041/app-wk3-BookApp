@@ -1,11 +1,14 @@
 import React from 'react';
 import { StyleSheet, ScrollView, Text, View, Image, Button, Linking } from 'react-native';
+import Starlist from '../components/Starlist';
 
 const DetailScreen = ({ route }) => {
-  const { title, 
+  const { 
+    title, 
     author,
     price,
     url,
+    star,
     image,
     descriptions
   } = route.params;
@@ -26,6 +29,10 @@ const DetailScreen = ({ route }) => {
           <Text>            
             <Text style={styles.textAuthorStyle}>{author}</Text>
           </Text>
+          <View style={{flexDirection:'row' ,paddingTop:5}}>
+            <Starlist star ={star}/>
+            <Text style={styles.textScore}>{star}.0 / 5.0</Text>
+          </View>
           <Text style={styles.textDescriptionStyle}>{descriptions}</Text>
       </View>
       <View style={styles.cardContainerStyle}>
@@ -58,6 +65,10 @@ const styles = StyleSheet.create({
     textAuthorStyle:{
         fontSize: 14,
         color:'#666666',
+    },
+    textScore:{
+      fontSize:12,
+      paddingLeft:5,
     },
     textDescriptionStyle:{
         marginTop: 15,
